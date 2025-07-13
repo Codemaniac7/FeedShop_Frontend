@@ -33,8 +33,10 @@ export interface DeleteAccountData {
 }
 
 // API 기본 URL
-const getBaseURL = () =>
-  process.env.REACT_APP_API_URL || "https://localhost:8443";
+const getBaseURL = () => {
+  const baseURL = process.env.REACT_APP_API_URL;
+  return baseURL;
+};
 
 // 공통 에러 처리
 const handleAuthError = (error: any): string => {

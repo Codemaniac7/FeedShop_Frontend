@@ -368,7 +368,7 @@ const SignUp: FC = () => {
 
     try {
       // 회원가입 API 호출 (fetch 사용)
-      const baseURL = process.env.REACT_APP_API_URL || "https://localhost:8443";
+      const baseURL = process.env.REACT_APP_API_URL;
       const response = await fetch(`${baseURL}/api/auth/signup`, {
         method: "POST",
         headers: {
